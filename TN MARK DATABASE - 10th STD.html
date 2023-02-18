@@ -1,0 +1,83 @@
+<html>
+<head>
+<style>
+body{
+ background-color:#c15ec1;
+}
+.text{
+    background-color: #d1729d;
+    text-align: center;
+    font-style: italic;
+}
+.number{
+    background-color: #d1729d;
+    text-align: center;
+    font-style: italic;
+}
+.my_Div{
+ border: 8.5px solid #e2eb8d;
+ background-color: #94d198;
+ color: darkblue;
+}
+p{
+ color:darkblue;
+ text-align:center;
+}
+h1{
+ font-size: 23.5px;
+ color: gold;
+ text-align: center;
+}
+</style>
+</head>
+
+<body>
+<script>
+function fn()
+{
+var fname = document.getElementById("fname").value;
+var lname = document.getElementById("lname").value;
+var gender = document.getElementById("gender").value;
+var a = document.getElementById("mark1").value;
+var b = document.getElementById("mark2").value;
+var c = document.getElementById("mark3").value;
+var d = document.getElementById("mark4").value;
+var e = document.getElementById("mark5").value;
+var TOTAL = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
+var PERCENTAGE = TOTAL / 5;
+document.getElementById("id").innerHTML = "<b style='color:magenta'>NAME= </b>"+ fname + "&nbsp;&nbsp;&nbsp;&nbsp;" + lname + '\n' + "<b style='color:magenta'>GENDER= </b>"+ gender + '\n' +"<b style='color:magenta'>TAMIL MARK= </b>"+ a + '\n' +"<b style='color:magenta'>ENGLISH MARK= </b>"+ b + '\n' +"<b style='color:magenta'>MATHS MARK= </b>"+ c + '\n' + "<b style='color:magenta'>SCIENCE MARK= </b>"+ d + '\n' + "<b style='color:magenta'>SOCIAL SCIENCE MARK= </b>"+ e + '\n' + "<b style='color:magenta'>TOTAL= </b>" + TOTAL + '\n' +"<b style='color:magenta'>PERCENTAGE(%)= </b>"+ PERCENTAGE + "%";
+//alert("NAME=" + fname + " " + lname + '\n' + "GENDER=" + gender + '\n' + "TAML MARK=" + a + '\n' + "ENGLISH MARK=" + b + '\n' + "MATHS MARK=" + c + '\n' + "SCIENCE MARK=" + d + '\n' + "SOCIAL SCIENCE MARK=" + e + '\n' + "TOTAL=" + TOTAL + '\n' + "PERCENTAGE(%)=" + PERCENTAGE + "%");
+}
+</script>
+
+<p><img src="https://schools.olympiadsuccess.com/assets/images/schools_board/board_32.png" alt="TN 10th LOGO" width="235" height="123.5"></p>
+<h1>TAMILNADU 10th STD MARK DATABASE</h1>
+<div class="my_Div">
+
+ <p><label for="fname">STUDENT FIRST NAME:</label></p>
+ <p><input type="text" class="text" id="fname" name="fname"></p>
+ <p><label for="lname">STUDENT LAST NAME:</label></p>
+ <p><input type="text" class="text" id="lname" name="lname"></p>
+ <p><b>GENDER:</b>
+ <b><input type="radio" id="gender" name="gender" value="MALE"></b>
+ <b><label for="male">MALE</label></b>
+ <b><input type="radio" id="gender" name="gender" value="FEMALE"></b>
+ <b><label for="female">FEMALE</label></b></p>
+ <p><label for="mark1">TAMIL MARK</label></p>
+ <p><input type="number" class="number" id="mark1" name="mark1" min="0" max="100" required="required"></p>
+ <p><label for="mark2">ENGLISH MARK</label></p>
+ <p><input type="number" class="number" id="mark2" name="mark2" min="0" max="100" required="required"></p>
+ <p><label for="mark3">MATHS MARK</label></p>
+ <p><input type="number" class="number" id="mark3" name="mark4" min="0" max="100" required="required"></p>
+ <p><label for="mark3">SCIENCE MARK</label></p>
+ <p><input type="number" class="number" id="mark4" name="mark3" min="0" max="100" required="required"></p>
+ <p><label for="mark3">SOCIAL SCIENCE MARK</label></p>
+ <p><input type="number" class="number" id="mark5" name="mark3" min="0" max="100" required="required"></p>
+ <p id="id"></p>
+ <h1><button onclick="fn()"><span style="color: red">"CLICK ME TO ENTER IN DATABASE AND VIEW IT!"</span></button></h1>
+
+</div>
+
+</body>
+</html>
+
